@@ -1,0 +1,9 @@
+.banner {
+  background-color: #e2e2e2;
+  border: 2px dashed #a1a2a3;
+  height: 130px;
+  max-width: 100%;
+  margin-bottom: 1em;
+  padding-top: 25px;
+  text-align: center;
+}
