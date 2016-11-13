@@ -9,6 +9,10 @@ var appRoutes = require('./routes/app');
 
 var app = express();
 
+//Mongoose
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://FreshAdmin:0n1yd3bi4n@localhost/fresh');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
