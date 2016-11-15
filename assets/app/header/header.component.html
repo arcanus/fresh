@@ -13,26 +13,68 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Fresh Indumentaria</a>
+      <!--<a class="navbar-brand" href="#">Fresh Indumentaria</a>-->
+      <a class="navbar-brand">Fresh Indumentaria</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link 2</a></li>
+        <li class="active"><a href="#">Inicio <span class="sr-only">(current)</span></a></li>
+        <!-- ASI S EPONE UN LINK:
+          <li><a href="#">Link 2</a></li>
+        -->
+        <!-- DROPDOWN CLIENTES: -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clientes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Nuevo Cliente</a></li>
+            <li><a href="#">Lista De Clientes</a></li>
+          </ul>
+        </li>
+        <!-- FIN DROPDOWN CLIENTES: -->
+        <!-- DROPDOWN TRABAJOS: -->
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Trabajos <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Nuevo Trabajo</a></li>
             <li><a href="#">Trabajos Activos</a></li>
+            <li role="separator" class="divider"></li>
             <li><a href="#">Historial De Trabajos</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
+        <!-- FIN DROPDOWN TRABAJOS: -->
+        <!-- DROPDOWN CAJA: -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Caja <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Ver Caja</a></li>
+            <li><a href="#">Caja Lauti</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Movimientos De Caja</a></li>
+          </ul>
+        </li>
+        <!-- FIN DROPDOWN CAJA: -->
+        <!-- DROPDOWN STOCK: -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Stock <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Stock Actual</a></li>
+            <li><a href="#">Alta De Producto</a></li>
+          </ul>
+        </li>
+        <!-- FIN DROPDOWN STOCK: -->
+        <!-- DROPDOWN DEUDAS: -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Deudas <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Deudas Actuales</a></li>
+            <li><a href="#">Tomar Nueva Deuda</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Historial De Deudas</a></li>
+          </ul>
+        </li>
+        <!-- FIN DROPDOWN DEUDAS: -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
