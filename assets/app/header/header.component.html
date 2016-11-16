@@ -15,15 +15,15 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Inicio <span class="sr-only">(current)</span></a></li>
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Inicio <span class="sr-only">(current)</span></a></li>
         <!-- ASI S EPONE UN LINK:
           <li><a href="#">Link 2</a></li>
         -->
         <!-- DROPDOWN CLIENTES: -->
-        <li class="dropdown">
+        <li class="dropdown" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clientes <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Nuevo Cliente</a></li>
+            <li><a routerLink="/users/new">Nuevo Cliente</a></li>
             <li><a href="#">Lista De Clientes</a></li>
           </ul>
         </li>

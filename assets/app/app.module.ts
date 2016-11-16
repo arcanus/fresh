@@ -6,19 +6,22 @@ import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./header/header.component";
 import { HomeComponent } from "./home/home.component";
 import { UsersComponent } from "./users/users.component";
+import { NewUserComponent } from "./users/new-user/newUser.component";
 
 @NgModule({
     declarations: [
         AppComponent,
         HeaderComponent,
         HomeComponent,
-        UsersComponent
+        UsersComponent,
+        NewUserComponent
     ],
     imports: [
         BrowserModule,
         RouterModule.forRoot([
-          { path: '', component: HomeComponent},
-          { path: 'users', component: UsersComponent}
+          { path: '', component: HomeComponent, pathMatch: 'full'},
+          { path: 'users', component: UsersComponent},
+          { path: 'users/new', component: NewUserComponent}
         ])
     ],
     bootstrap: [AppComponent]
