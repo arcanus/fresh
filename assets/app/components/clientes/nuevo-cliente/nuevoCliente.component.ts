@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { Cliente } from '../../../models/cliente.model';
+import { ClientesService } from '../clientes.service';
 
 
 @Component({
   selector:     'my-nuevoCliente',
-  templateUrl:  './nuevoCliente.component.html'
+  templateUrl:  './nuevoCliente.component.html',
+  providers: [ ClientesService ]
 })
 export class NuevoClienteComponent {
 
