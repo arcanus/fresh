@@ -2,26 +2,26 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule }   from '@angular/router';
 
-import { AppComponent } from "./app.component";
-import { HeaderComponent } from "./header/header.component";
-import { HomeComponent } from "./home/home.component";
-import { UsersComponent } from "./users/users.component";
-import { NewUserComponent } from "./users/new-user/newUser.component";
+import { AppComponent } from "./components/app.component";
+import { HeaderComponent } from "./components/header/header.component";
+import { HomeComponent } from "./components/home/home.component";
+import { ClientesComponent } from "./components/clientes/clientes.component";
+import { NuevoClienteComponent } from "./components/clientes/nuevo-cliente/nuevoCliente.component";
 
 @NgModule({
     declarations: [
         AppComponent,
         HeaderComponent,
         HomeComponent,
-        UsersComponent,
-        NewUserComponent
+        ClientesComponent,
+        NuevoClienteComponent
     ],
     imports: [
         BrowserModule,
         RouterModule.forRoot([
           { path: '', component: HomeComponent, pathMatch: 'full'},
-          { path: 'users', component: UsersComponent},
-          { path: 'users/new', component: NewUserComponent}
+          { path: 'clientes', component: ClientesComponent},
+          { path: 'clientes/nuevo', component: NuevoClienteComponent}
         ])
     ],
     bootstrap: [AppComponent]
