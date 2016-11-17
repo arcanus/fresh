@@ -4,24 +4,26 @@
       <h3 class="panel-title">Nuevo Cliente:</h3>
     </div>
     <div class="panel-body">
-      <form>
+      <form (ngSubmit)="onSubmit()" #clienteForm="ngForm">
         <div class="form-group">
           <label for="inputNombre">Nombre y Apellido:</label>
-          <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese el nombre y el apellido">
+          <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese el nombre y el apellido" required [(ngModel)] = cliente.nombre name="nombre">
         </div>
         <div class="form-group">
           <label for="inputTelefono">Teléfono:</label>
-          <input type="text" class="form-control" id="inputTelefono" placeholder="Ingrese el teléfono">
+          <input type="text" class="form-control" id="inputTelefono" placeholder="Ingrese el teléfono" [(ngModel)] = cliente.telefono name="telefono">
         </div>
         <div class="form-group">
           <label for="inputPerfilFacebook">Perfil De Facebook:</label>
-          <input type="text" class="form-control" id="inputPerfilFacebook" placeholder="Ingrese el perfil de facebook">
+          <input type="text" class="form-control" id="inputPerfilFacebook" placeholder="Ingrese el perfil de facebook"[(ngModel)] = cliente.perfil_facebook name="perfil_facebook">
         </div>
         <div class="form-group">
-          <label for="inputCiudad">Ciudad:</label>
-          <input type="text" class="form-control" id="inputCiudad" placeholder="Ingrese la ciudad donde vive">
+          <label for="power">Ciudad:</label>
+          <select class="form-control" id="ciudad" required [(ngModel)] = cliente.ciudad name="ciudad">
+            <option *ngFor="let c of ciudades" [value]="c">{{c}}</option>
+          </select>
         </div>
-        <button type="submit" class="btn btn-default">Guardar</button>
+        <button type="submit" class="btn btn-default" [disabled]="!clienteForm.form.valid">Guardar</button>
       </form>
     </div>
   </div>
