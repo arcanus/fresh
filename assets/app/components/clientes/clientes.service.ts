@@ -1,8 +1,7 @@
 import { Injectable }     from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-//import { Observable }     from 'rxjs/Observable';
-//import 'rxjs/operator/map';
-//import 'rxjs/Rx';
+import 'rxjs/Rx';
+import {Observable} from 'rxjs';
 
 
 import { Cliente } from '../../models/cliente.model';
@@ -11,7 +10,7 @@ import { Cliente } from '../../models/cliente.model';
 export class ClientesService {
 
   //private heroesUrl = 'app/heroes';  // URL to web API
-/*
+
   private clientesUrl = 'http://localhost:3000/clientes/nuevo';
 
   constructor (private http: Http) {}
@@ -44,5 +43,5 @@ export class ClientesService {
     console.error(errMsg);
     return Observable.throw(errMsg);
   }
-  */
+
 }

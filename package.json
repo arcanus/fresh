@@ -33,6 +33,7 @@
     "zone.js": "^0.6.23"
   },
   "devDependencies": {
+    "@types/chai": "^3.4.34",
     "@types/core-js": "^0.9.34",
     "@types/node": "^6.0.45",
     "angular2-router-loader": "^0.3.2",
