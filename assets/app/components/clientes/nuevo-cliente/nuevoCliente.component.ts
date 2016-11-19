@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Cliente } from '../../../models/cliente.model';
 import { ClientesService } from '../clientes.service';
+import { NgForm }   from '@angular/forms';
 
 
 @Component({
@@ -30,8 +31,10 @@ export class NuevoClienteComponent {
     this.ciudades.sort();
   }
 
-  onSubmit() {
+  onSubmit(f: NgForm) {
+    console.log(JSON.stringify(this.cliente));
     this.cliente = new Cliente('', '', '', 'Neuquen');
+    f.resetForm();
   }
 
 }

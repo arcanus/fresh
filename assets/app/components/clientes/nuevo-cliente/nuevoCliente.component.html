@@ -4,7 +4,7 @@
       <h3 class="panel-title">Nuevo Cliente:</h3>
     </div>
     <div class="panel-body">
-      <form (ngSubmit)="onSubmit()" #clienteForm="ngForm">
+      <form (ngSubmit)="onSubmit(clienteForm)" #clienteForm="ngForm">
         <div class="form-group">
           <label for="inputNombre">Nombre y Apellido:</label>
           <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese el nombre y el apellido" required [(ngModel)] = cliente.nombre name="nombre">
