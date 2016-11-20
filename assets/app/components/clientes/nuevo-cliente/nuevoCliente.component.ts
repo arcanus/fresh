@@ -6,8 +6,7 @@ import { NgForm }   from '@angular/forms';
 
 @Component({
   selector:     'my-nuevoCliente',
-  templateUrl:  './nuevoCliente.component.html',
-  providers: [ ClientesService ]
+  templateUrl:  './nuevoCliente.component.html'
 })
 export class NuevoClienteComponent {
 
@@ -24,17 +23,22 @@ export class NuevoClienteComponent {
     'Cinco Saltos'
   ];
 
-  cliente = new Cliente('', '', '', 'Neuquen');
+  cliente = new Cliente('', '', '', '', 'Neuquen', '');
 
-  constructor()
+  constructor(private _clientesService: ClientesService)
   {
     this.ciudades.sort();
   }
 
   onSubmit(f: NgForm) {
-    console.log(JSON.stringify(this.cliente));
-    this.cliente = new Cliente('', '', '', 'Neuquen');
-    f.resetForm();
+    this._clientesService.addCliente(this.cliente).subscribe(
+      data => {
+        console.log(data);
+        f.resetForm();
+        this.cliente.ciudad = 'Neuquen';
+      },
+      error => console.error(error)
+    );
   }
 
 }

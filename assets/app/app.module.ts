@@ -10,6 +10,8 @@ import { HomeComponent } from "./components/home/home.component";
 import { ClientesComponent } from "./components/clientes/clientes.component";
 import { NuevoClienteComponent } from "./components/clientes/nuevo-cliente/nuevoCliente.component";
 
+import { ClientesService } from "./components/clientes/clientes.service";
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -28,6 +30,7 @@ import { NuevoClienteComponent } from "./components/clientes/nuevo-cliente/nuevo
           { path: 'clientes/nuevo', component: NuevoClienteComponent}
         ])
     ],
+    providers: [ClientesService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
