@@ -25,4 +25,20 @@ router.post('/nuevo', function (req, res, next) {
     });
 });
 
+router.get('/lista', function (req, res, next) {
+      Cliente.find()
+          .exec(function(err, clientes) {
+            if (err) {
+              return res.status(500).json({
+                title: "Error recuperando los clientes.",
+                error: err
+              });
+            }
+            res.status(200).json({
+              title: 'Clientes recuperados con exito.',
+              obj: clientes
+            });
+          });
+});
+
 module.exports = router;

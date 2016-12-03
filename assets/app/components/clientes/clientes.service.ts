@@ -21,4 +21,17 @@ export class ClientesService {
 
   }
 
+  getAllClientes () {
+    return this.http.get('http://localhost:3000/clientes/lista')
+        .map((response: Response) => {
+          const clientes = response.json().obj;
+          let formattedClientes: Cliente[] = [];
+          for (let c of clientes) {
+            formattedClientes.push(new Cliente(c.nombre, c.email, c.telefono, c.perfil_facebook, c.ciudad, c._id));
+          }
+          return formattedClientes;
+        })
+        .catch((error: Response) => Observable.throw(error.json()));
+  }
+
 }
