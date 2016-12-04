@@ -6,20 +6,22 @@
     <div class="panel-body">
       <table class="table table-striped">
         <tr>
-          <th>#ID:</th>
+          <th hidden>#ID:</th>
           <th>Nombre y Apellido:</th>
           <th>Telefono:</th>
           <th>Email:</th>
           <th>Perfil De Facebook:</th>
           <th>Ciudad:</th>
+          <th>Acciones:</th>
         </tr>
         <tr *ngFor="let c of clientes;">
-          <td>{{c.id}}</td>
+          <td hidden>{{c.id}}</td>
           <td>{{c.nombre}}</td>
           <td>{{c.telefono}}</td>
           <td>{{c.email}}</td>
           <td>{{c.perfil_facebook}}</td>
           <td>{{c.ciudad}}</td>
+          <td><button type="button" class="btn btn-danger" (click)="onClickBtnEliminar(c)">Eliminar</button></td>
         </tr>
       </table>
     </div>

@@ -23,4 +23,13 @@ export class ListaClientesComponent implements OnInit {
         );
   }
 
+  onClickBtnEliminar($cliente) {
+    this._clientesService.deleteCliente($cliente)
+        .subscribe(
+          (cli: Cliente) => {            
+            console.log("Cliente eliminado");
+          }
+        );
+  }
+
 }

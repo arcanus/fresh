@@ -35,10 +35,9 @@ export class NuevoClienteComponent {
       data => {
         console.log(data);
         f.resetForm();
-        this.cliente.ciudad = 'Neuquen';
       },
       error => console.error(error)
-    );
+    );    
   }
 
 }

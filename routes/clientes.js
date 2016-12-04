@@ -41,4 +41,33 @@ router.get('/lista', function (req, res, next) {
           });
 });
 
+router.delete('/:id', function (req, res, next) {
+      Cliente.findById(req.params.id, function(err, cliente) {
+        if (err) {
+          return res.status(500).json({
+            title: 'Ha ocurrido un error',
+            error: err
+          });
+        }
+        if (!cliente) {
+          return res.status(500).json({
+            title: 'No se ha encontrado el cliente',
+            err: {message: 'No se ha encontrado el cliente'}
+          });
+        }
+        cliente.remove(function (err, result) {
+          if (err) {
+            return res.status(500).json({
+              title: 'Ha ocurrido un error',
+              error: err
+            });
+          }
+          res.status(200).json({
+            message: 'Se ha eliminado el cliente',
+            obj: result
+          });
+        });
+      });
+});
+
 module.exports = router;
